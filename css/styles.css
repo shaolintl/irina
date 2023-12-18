@@ -61,7 +61,9 @@
   --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-  --bs-body-font-family: Nunito, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+/*  --bs-body-font-family: Nunito, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji; */
+  --bs-body-font-family: 'Lora', serif;
+  --bs-header-font-family: 'Playfair Display', serif;
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
@@ -81,14 +83,13 @@
   --bs-link-hover-color: #50817e;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #faf4e0;
-}
-
-:root {
-    --primary-color: #a97142; /* Gold */
-    --secondary-color: #0056b3; /* Royal Blue */
-    --accent-color: #c73228; /* Deep Red */
-    --neutral-color: #f5f5f5; /* Cream */
-    /* Add more colors as needed */
+  --primary-color: #DAA520; /* Gold */
+  --accent-color: #8B0000; /* Deep Red */
+  --link-color: #000080; /* Royal Blue */
+  --neutral-light-color: #FFFDD0; /* Cream */
+  --secondary-accent-color: #CC5500; /* Burnt Orange */
+  --text-dark-color: #0A3044; /* Dark Blue-Grey */
+  --border-color: #D3D3D3; /* Light Grey */
 }
 
 *,
@@ -125,6 +126,7 @@ hr {
 }
 
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+  font-family: var(--bs-header-font-family);
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-weight: 500;
@@ -2856,8 +2858,8 @@ textarea.form-control-lg {
 }
 
 .btn-primary {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #64a19d;
+  --bs-btn-bg: var(--neutral-light-color);
+  --bs-btn-color: var(--secondary-color);
   --bs-btn-border-color: #64a19d;
   --bs-btn-hover-color: #fff;
   --bs-btn-hover-bg: #558985;
