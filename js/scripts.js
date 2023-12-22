@@ -67,5 +67,5 @@ var myAudio = document.getElementById("myAudio");
 
     // Autoplay audio when page loads
     window.onload = function() {
-        myAudio.play();
+        //myAudio.play();
     };
