@@ -11121,10 +11121,6 @@ body {
   }
 }
 
-.portrait {
-  max-width: 50%;
-}
-
 .about-section {
   padding: 10rem 10rem;
   background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
