@@ -11121,6 +11121,13 @@ body {
   }
 }
 
+@media (max-width: 576px) {
+    .about-section .centered-img {
+        width: 80%; /* Adjust width as needed for mobile devices */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
 .about-section {
   padding: 10rem 10rem;
   background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
