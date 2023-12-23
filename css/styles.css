@@ -83,11 +83,11 @@
   --bs-link-hover-color: #50817e;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #faf4e0;
-  --primary-color: #DAA520; /* Gold */
-  --accent-color: #8B0000; /* Deep Red */
+  --primary-color: #F5F5DC;
+  --accent-color: #e6e6e6;
   --link-color: #000080; /* Royal Blue */
-  --neutral-light-color: #FFFDD0; /* Cream */
-  --secondary-accent-color: #CC5500; /* Burnt Orange */
+  --neutral-light-color: #e6e6e6;
+  --secondary-accent-color: #e6e6e6;
   --text-dark-color: #0A3044; /* Dark Blue-Grey */
   --border-color: #D3D3D3; /* Light Grey */
 }
@@ -2892,7 +2892,7 @@ textarea.form-control-lg {
 
 .btn-success {
   --bs-btn-color: #000;
-  --bs-btn-bg: #67c29c;
+  --bs-btn-bg: #ebdcb4;
   --bs-btn-border-color: #67c29c;
   --bs-btn-hover-color: #000;
   --bs-btn-hover-bg: #7ecbab;
@@ -2905,6 +2905,12 @@ textarea.form-control-lg {
   --bs-btn-disabled-color: #000;
   --bs-btn-disabled-bg: #67c29c;
   --bs-btn-disabled-border-color: #67c29c;
+}
+
+.btn-transparent {
+  --bs-btn-color: var(--primary-color);
+    background-color: transparent; /* Remove background */
+    border: none;                  /* Remove border */
 }
 
 .btn-info {
@@ -2943,7 +2949,7 @@ textarea.form-control-lg {
 
 .btn-danger {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #a16468;
+  --bs-btn-bg: #a67b5b;
   --bs-btn-border-color: #a16468;
   --bs-btn-hover-color: #fff;
   --bs-btn-hover-bg: #895558;
@@ -11120,6 +11126,19 @@ body {
   }
 }
 
+.music {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 35rem;
+  padding: 15rem 0;
+  background: linear-gradient(to bottom, #000  0%, rgba(0, 0, 0, 0.2) 50%, #000 100%), url("../assets/img/bg-masthead.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
 @media (max-width: 576px) {
     .about-section .centered-img {
         width: 70%;
@@ -11282,3 +11301,276 @@ body {
 
 .btn-flag {
 }
+
+.portrait-main {
+  border: 5px solid #F5F5DC; /* 5px wide solid brown border */
+    border-radius: 50%;      /* Circular border */
+}
+
+/*---------------------
+  Track
+-----------------------*/
+
+.track {
+	padding-top: 120px;
+	padding-bottom: 40px;
+	overflow: hidden;
+}
+
+.track .section-title {
+	margin-bottom: 105px;
+}
+
+.track__content {
+	height: 502px;
+	overflow-y: auto;
+}
+
+.track__all {
+	text-align: right;
+	margin-bottom: 100px;
+}
+
+.jp-play {
+	position: relative;
+	height: 50px;
+	width: 50px;
+	background: transparent;
+	border: 2px solid var(--accent-color);
+	border-radius: 50%;
+}
+
+.jp-play:after {
+	position: absolute;
+	display: block;
+	left: 17px;
+	top: 12px;
+	width: 16px;
+	height: 20px;
+	background: url(../img/play-default.png);
+	content: "";
+}
+
+.jp-state-playing .jp-play {
+	background: var(--primary-color) !important;
+	border-color: var(--primary-color) !important;
+}
+
+.jp-state-playing .jp-play:after {
+	background: url(../img/pause.png) !important;
+	left: 15px;
+	top: 12px;
+}
+
+.jp-audio .jp-play:focus {
+	background: var(--primary-color) !important;
+	border-color: var(--primary-color) !important;
+}
+
+.jp-audio .jp-play:focus:after {
+	background: url(../img/play.png);
+}
+
+.jp-seek-bar>div {
+	height: 5px;
+	background: var(--neutral-color);
+	cursor: pointer;
+	width: 245px;
+}
+
+.player_bars {
+	width: 350px;
+	display: table;
+	padding-left: 50px;
+	position: relative;
+	padding-top: 25px;
+	float: left;
+	margin-right: 30px;
+}
+
+.jp-play-bar {
+	position: relative;
+	height: 100%;
+	background: var(--primary-color);
+	overflow: visible !important;
+}
+
+.jp-current-time {
+	font-size: 15px;
+	color: var(--accent-color);
+	position: absolute;
+	left: -50px;
+	top: -9px;
+}
+
+.jp-duration {
+	font-size: 15px;
+	color: var(--accent-color);
+	position: absolute;
+	right: 0;
+	top: 16px;
+}
+
+.player_controls_box {
+	width: 50px;
+	float: left;
+	margin-right: 20px;
+}
+
+.jp-mute {
+	font-size: 18px;
+	border: none;
+	background: none;
+	color: var(--accent-color);
+	position: absolute;
+	left: 0;
+	top: 13px;
+}
+
+.jp-volume-bar {
+	height: 5px;
+	width: 70px;
+	background: var(--neutral-color);
+	cursor: pointer;
+}
+
+.jp-volume-bar-value {
+	background: var(--primary-color);
+	height: 100%;
+}
+
+.jp-volume-controls {
+	position: relative;
+	width: 95px;
+	float: left;
+	padding-left: 30px;
+	padding-top: 25px;
+}
+
+.single_player_container {
+	overflow: hidden;
+	margin-bottom: 40px;
+}
+
+.single_player_container:last-child {
+	margin-bottom: 0;
+}
+
+.single_player_container h4 {
+	font-size: 26px;
+	color: var(--accent-color);
+	font-weight: 700;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+
+.track__pic {
+	position: relative;
+	z-index: 1;
+}
+
+.track__pic:after {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: var(--neutral-color);
+	content: "";
+	z-index: -1;
+}
+
+.track__pic img {
+	position: relative;
+	top: -50px;
+	width: calc(100% - 40px);
+	margin-left: 40px;
+	height: 502px;
+}
+
+/*---------------------
+  Youtube
+-----------------------*/
+
+.youtube {
+	padding-bottom: 50px;
+}
+
+.youtube .section-title {
+	text-align: center;
+}
+
+.youtube .section-title h1 {
+	font-size: 90px;
+}
+
+.youtube__item {
+	-webkit-transition: all, 0.3s;
+	-o-transition: all, 0.3s;
+	transition: all, 0.3s;
+	margin-bottom: 30px;
+}
+
+.youtube__item:hover {
+	-webkit-box-shadow: 0px 3px 30px rgba(22, 41, 124, 0.1);
+	box-shadow: 0px 3px 30px rgba(22, 41, 124, 0.1);
+}
+
+.youtube__item__pic {
+	height: 240px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+.youtube__item__pic .play-btn {
+	font-size: 16px;
+	color: var(--primary-color);
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+	background: rgba(var(--neutral-color), 0.3);
+	display: inline-block;
+	line-height: 60px;
+	text-align: center;
+	position: relative;
+	z-index: 1;
+}
+
+.youtube__item__pic .play-btn i {
+	position: relative;
+	top: 2px;
+	left: 2px;
+}
+
+.youtube__item__pic .play-btn:after {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	height: 40px;
+	width: 40px;
+	background: var(--neutral-color);
+	border-radius: 50%;
+	content: "";
+	z-index: -1;
+}
+
+.youtube__item__text {
+	padding: 25px 30px 20px 20px;
+	background: var(--neutral-color);
+}
+
+.youtube__item__text h4 {
+	font-size: 26px;
+	color: var(--accent-color);
+	line-height: 34px;
+	font-weight: 700;
+}
+
+
