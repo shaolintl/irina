@@ -69,3 +69,20 @@ var myAudio = document.getElementById("myAudio");
     window.onload = function() {
         //myAudio.play();
     };
+
+function switchLanguage(language) {
+    var englishTexts = document.getElementsByClassName('english');
+    var frenchTexts = document.getElementsByClassName('french');
+
+    if(language == 'english') {
+        for(var i = 0; i < englishTexts.length; i++) {
+            englishTexts[i].style.display = 'block';
+            frenchTexts[i].style.display = 'none';
+        }
+    } else {
+        for(var i = 0; i < englishTexts.length; i++) {
+            englishTexts[i].style.display = 'none';
+            frenchTexts[i].style.display = 'block';
+        }
+    }
+}
