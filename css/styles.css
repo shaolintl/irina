@@ -612,7 +612,6 @@ progress {
 }
 
 .img-fluid {
-  max-width: 100%;
   height: auto;
 }
 
@@ -11123,8 +11122,14 @@ body {
 
 @media (max-width: 576px) {
     .about-section .centered-img {
-        width: 80%; /* Adjust width as needed for mobile devices */
+        width: 70%;
         height: auto; /* Maintain aspect ratio */
+    }
+    .about-section .img-container {
+        min-width: 300px; /* Adjust this value as needed */
+      width: 70%;
+  height: 100%;
+  object-fit: contain;
     }
 }
 
