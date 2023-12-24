@@ -11,6 +11,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
+  --scale-factor: 0.45; /* 50% scaling for player*/
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
   --bs-purple: #7464a1;
@@ -11307,85 +11308,88 @@ body {
     border-radius: 50%;      /* Circular border */
 }
 
+
 /*---------------------
   Track
 -----------------------*/
 
 .track {
-	padding-top: 120px;
-	padding-bottom: 40px;
+	padding-top: calc(120px * var(--scale-factor));
+	padding-bottom: calc(40px * var(--scale-factor));
 	overflow: hidden;
 }
 
 .track .section-title {
-	margin-bottom: 105px;
+	margin-bottom: calc(105px * var(--scale-factor));
 }
 
 .track__content {
-	height: 502px;
+	height: calc(502px * var(--scale-factor));
 	overflow-y: auto;
 }
 
 .track__all {
 	text-align: right;
-	margin-bottom: 100px;
+	margin-bottom: calc(100px * var(--scale-factor));
+}
+
+.jp-audio {
 }
 
 .jp-play {
 	position: relative;
-	height: 50px;
-	width: 50px;
+	height: calc(50px * var(--scale-factor));
+	width: calc(50px * var(--scale-factor));
 	background: transparent;
-	border: 2px solid var(--accent-color);
+	border: calc(2px * var(--scale-factor)) solid var(--accent-color);
 	border-radius: 50%;
+  top: -4px;
 }
 
 .jp-play:after {
 	position: absolute;
 	display: block;
-	left: 17px;
-	top: 12px;
-	width: 16px;
-	height: 20px;
-	background: url(../img/play-default.png);
+	left: calc(17px * var(--scale-factor));
+	top: calc(12px * var(--scale-factor));
+	width: calc(16px * var(--scale-factor));
+	height: calc(20px * var(--scale-factor));
+	background: url(../assets/img/play.png);
 	content: "";
 }
 
 .jp-state-playing .jp-play {
-	background: var(--primary-color) !important;
 	border-color: var(--primary-color) !important;
 }
 
 .jp-state-playing .jp-play:after {
-	background: url(../img/pause.png) !important;
-	left: 15px;
-	top: 12px;
+	background: url(../assets/img/pause.png) !important;
+	left: calc(15px * var(--scale-factor));
+	top: calc(12px * var(--scale-factor));
 }
 
 .jp-audio .jp-play:focus {
-	background: var(--primary-color) !important;
 	border-color: var(--primary-color) !important;
 }
 
 .jp-audio .jp-play:focus:after {
-	background: url(../img/play.png);
+	background: url(../assets/img/play.png);
 }
 
 .jp-seek-bar>div {
-	height: 5px;
+	height: calc(5px * var(--scale-factor));
 	background: var(--neutral-color);
 	cursor: pointer;
-	width: 245px;
+	width: calc(245px * var(--scale-factor));
 }
 
 .player_bars {
-	width: 350px;
+	width: calc(350px * var(--scale-factor));
 	display: table;
-	padding-left: 50px;
+	padding-left: calc(50px * var(--scale-factor));
 	position: relative;
-	padding-top: 25px;
+	padding-top: calc(25px * var(--scale-factor));
 	float: left;
-	margin-right: 30px;
+	margin-right: calc(30px * var(--scale-factor));
 }
 
 .jp-play-bar {
@@ -11396,40 +11400,40 @@ body {
 }
 
 .jp-current-time {
-	font-size: 15px;
+	font-size: calc(15px * var(--scale-factor));
 	color: var(--accent-color);
 	position: absolute;
-	left: -50px;
-	top: -9px;
+	left: calc(-50px * var(--scale-factor));
+	top: calc(-9px * var(--scale-factor));
 }
 
 .jp-duration {
-	font-size: 15px;
+	font-size: calc(15px * var(--scale-factor));
 	color: var(--accent-color);
 	position: absolute;
 	right: 0;
-	top: 16px;
+	top: calc(16px * var(--scale-factor));
 }
 
 .player_controls_box {
-	width: 50px;
+	width: calc(50px * var(--scale-factor));
 	float: left;
-	margin-right: 20px;
+	margin-right: calc(20px * var(--scale-factor));
 }
 
 .jp-mute {
-	font-size: 18px;
+	font-size: calc(18px * var(--scale-factor));
 	border: none;
 	background: none;
 	color: var(--accent-color);
 	position: absolute;
 	left: 0;
-	top: 13px;
+	top: calc(13px * var(--scale-factor));
 }
 
 .jp-volume-bar {
-	height: 5px;
-	width: 70px;
+	height: calc(5px * var(--scale-factor));
+	width: calc(70px * var(--scale-factor));
 	background: var(--neutral-color);
 	cursor: pointer;
 }
@@ -11441,15 +11445,15 @@ body {
 
 .jp-volume-controls {
 	position: relative;
-	width: 95px;
+	width: calc(95px * var(--scale-factor));
 	float: left;
-	padding-left: 30px;
-	padding-top: 25px;
+	padding-left: calc(30px * var(--scale-factor));
+	padding-top: calc(25px * var(--scale-factor));
 }
 
 .single_player_container {
 	overflow: hidden;
-	margin-bottom: 40px;
+	margin-bottom: calc(40px * var(--scale-factor));
 }
 
 .single_player_container:last-child {
@@ -11457,10 +11461,10 @@ body {
 }
 
 .single_player_container h4 {
-	font-size: 26px;
+	font-size: calc(26px * var(--scale-factor));
 	color: var(--accent-color);
 	font-weight: 700;
-	margin-bottom: 20px;
+	margin-bottom: calc(20px * var(--scale-factor));
 	text-transform: uppercase;
 }
 
@@ -11482,10 +11486,10 @@ body {
 
 .track__pic img {
 	position: relative;
-	top: -50px;
-	width: calc(100% - 40px);
-	margin-left: 40px;
-	height: 502px;
+	top: calc(-50px * var(--scale-factor));
+	width: calc(100% - 40px * var(--scale-factor));
+	margin-left: calc(40px * var(--scale-factor));
+	height: calc(502px * var(--scale-factor));
 }
 
 /*---------------------

@@ -53,23 +53,6 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
-var myAudio = document.getElementById("myAudio");
-    myAudio.loop = false;
-
-    function playAudio() {
-        myAudio.play();
-    }
-
-    function stopAudio() {
-        myAudio.pause();
-        myAudio.currentTime = 0; // Reset audio to start
-    }
-
-    // Autoplay audio when page loads
-    window.onload = function() {
-        //myAudio.play();
-    };
-
 function switchLanguage(language) {
     var englishTexts = document.getElementsByClassName('english');
     var frenchTexts = document.getElementsByClassName('french');
