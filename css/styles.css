@@ -11138,6 +11138,11 @@ body {
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
+  color: var(--primary-color); /* Border with primary color */
+}
+
+.music .card {
+  background: var(--neutral-color);
 }
 
 @media (max-width: 576px) {
@@ -11584,6 +11589,15 @@ body {
     }
     .carousel-inner .carousel-item > div:first-child {
         display: block;
+    }
+    .carousel-inner .carousel-item-end.active,
+    .carousel-inner .carousel-item-next {
+      transform: translateX(100%);
+    }
+
+    .carousel-inner .carousel-item-start.active,
+    .carousel-inner .carousel-item-prev {
+      transform: translateX(-100%);
     }
 }
 
