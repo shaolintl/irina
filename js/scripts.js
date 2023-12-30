@@ -70,18 +70,20 @@ function switchLanguage(language) {
     }
 }
 
-document.querySelectorAll('#video-carousel .card-img-top').forEach(item => {
+document.querySelectorAll('.carousel .card-img-top').forEach(item => {
   item.addEventListener('click', event => {
     const videoId = event.target.getAttribute('data-video-id');
     document.getElementById('main-video').src = `https://www.youtube.com/embed/${videoId}`;
+    scrollToMainVideo();
   });
 });
 
 function addVideoClickListeners() {
-  document.querySelectorAll('#video-carousel .card-img-top').forEach(item => {
+  document.querySelectorAll('.carousel .card-img-top').forEach(item => {
     item.addEventListener('click', event => {
       const videoId = event.target.getAttribute('data-video-id');
       document.getElementById('main-video').src = `https://www.youtube.com/embed/${videoId}`;
+      scrollToMainVideo();
     });
   });
 }
@@ -105,3 +107,11 @@ items.forEach((el) => {
 
 // Reattach event listeners to cloned items
 addVideoClickListeners();
+
+// Scroll to main video function
+function scrollToMainVideo() {
+  const mainVideoElement = document.getElementById('main-video');
+  if (mainVideoElement) {
+    mainVideoElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+}
