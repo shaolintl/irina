@@ -11159,6 +11159,7 @@ body {
 }
 
 .about-section {
+    color: var(--primary-color); /* Border with primary color */
     padding: 10rem 10rem;
   background: url('../assets/img/about-bg.jpg'); /* Path to your background image */
   background-size: cover; /* Ensures the background image covers the entire section */
@@ -11192,7 +11193,6 @@ body {
 .scrollable-bio {
     height: 300px; /* Adjust height as needed */
     overflow-y: auto;
-    color: var(--primary-color); /* Border with primary color */
     padding: 15px;
     text-align: left; /* Align the text to the left */
     border-radius: 5px; /* Optional: For rounded corners */
@@ -11215,32 +11215,48 @@ body {
 .scrollable-bio::-webkit-scrollbar-track {
     background: #f1f1f1;
 }
+@media (max-width: 576px) {
+    .project-section .centered-img {
+        width: 70%;
+        height: auto; /* Maintain aspect ratio */
+    }
+    .project-section .img-container {
+        min-width: 300px; /* Adjust this value as needed */
+      width: 70%;
+  height: 100%;
+  object-fit: contain;
+    }
+}
 
-.projects-section {
-  padding: 10rem 0;
+.project-section {
+    color: var(--primary-color); /* Border with primary color */
+    padding: 10rem 1rem;
+  background: url('../assets/img/about-bg.jpg'); /* Path to your background image */
+  background-size: cover; /* Ensures the background image covers the entire section */
+  position: relative; /* Needed for layering effects */
 }
-.projects-section .featured-text {
-  padding: 2rem;
+.project-section p {
+  margin-bottom: 5rem;
 }
-@media (min-width: 992px) {
-  .projects-section .featured-text {
-    padding: 0 0 0 2rem;
-    border-left: 0.5rem solid #64a19d;
-  }
+
+.project-section::before {
+    content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0,1.0) 0%, rgba(0, 0, 0, 0.0) 50%, rgba(0, 0, 0, 1.0) 100%);
+  z-index: 1;
 }
-.projects-section .project-text {
-  padding: 3rem;
-  font-size: 90%;
-}
-@media (min-width: 992px) {
-  .projects-section .project-text {
-    padding: 5rem;
-  }
+.project-section > * {
+  position: relative;
+  z-index: 2; /* Higher than the pseudo-element */
 }
 
 .signup-section {
   padding: 10rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000 100%), url("../assets/img/bg-signup.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1.0) 100%), url("../assets/img/bg-signup.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -11635,4 +11651,39 @@ body {
 #video-carousel .carousel-inner {
     width: 75%;  /* Adjust the width as needed */
     margin: auto; /* Center the carousel inner */
+}
+
+/* Default style */
+.about-section .container, project-section {
+    transform: translateY(-100px); /* No vertical shift by default */
+}
+.videos .container {
+    transform: translateY(-150px); /* No vertical shift by default */
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+    .masthead .container {
+        transform: translateY(-100px); /* Shifts the container 20px upward */
+    }
+}
+
+.transparent-accordion .accordion-item {
+    color: var(--primary-color); /* Border with primary color */
+    background-color: transparent;
+}
+
+.transparent-accordion .accordion-button {
+    color: var(--primary-color); /* Border with primary color */
+    background-color: transparent;
+}
+
+.transparent-accordion .accordion-button.collapsed {
+    color: var(--primary-color); /* Border with primary color */
+    background-color: transparent;
+}
+
+.transparent-accordion .accordion-body {
+    color: var(--primary-color); /* Border with primary color */
+    background-color: transparent;
 }
